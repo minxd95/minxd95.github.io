@@ -1,10 +1,20 @@
 import React from "react";
 import Header from "./header";
+import Footer from "@/components/footer";
+import { Toaster } from "@/components/ui/toaster";
 
-export default function Layout() {
+interface LayoutProps {
+  children: React.ReactNode;
+}
+export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="z-10 fixed w-full h-16">
+    <>
       <Header />
-    </div>
+      <main className="max-w-[40rem] mx-auto my-0 px-4 pt-16 pb-24 min-h-[calc(100vh-4rem)]">
+        {children}
+      </main>
+      <Footer />
+      <Toaster />
+    </>
   );
 }

@@ -9,7 +9,7 @@ export default function Header() {
       <div className="bg-background max-w-[40rem] h-full px-4 flex justify-between items-center my-0 mx-auto">
         <div className="flex">
           <Link to="/" className="flex items-center gap-1 mr-6">
-            <span className="font-bold text-lg">Minseok Seo</span>
+            <span className="font-bold text-lg">Minseok Log</span>
             <Music4 className="w-[1.2rem] h-[1.2rem]" />
           </Link>
           <ul className="flex items-center gap-6">
