@@ -1,19 +1,18 @@
 import * as React from "react";
 import { HeadFC, Link, PageProps } from "gatsby";
-import Layout from "../components/layout";
 import WelcomeAnimation from "@/components/welcome-animation";
 import PageDescription from "@/components/page-description";
 import { H2 } from "@/components/typography";
 import PostItem from "@/components/post-item";
 import { StaticImage } from "gatsby-plugin-image";
 import { Button } from "@/components/ui/button";
-import { GITHUB_URL, INSTAGRAM_URL, PROJECTS_URL } from "@/constatns";
+import { GITHUB_URL, INSTAGRAM_URL, PORTFOLIO_URL } from "@/constants";
 import { ExternalLink, Github, Instagram } from "lucide-react";
 import ContactMe from "@/components/contact-me";
 
 const IndexPage = ({}: PageProps) => {
   return (
-    <Layout>
+    <>
       <WelcomeAnimation />
       <PageDescription>
         이곳은 웹개발자
@@ -55,8 +54,8 @@ const IndexPage = ({}: PageProps) => {
         </div>
         <div className="flex gap-2">
           <Button variant="secondary" asChild>
-            <Link target="_blank" to={PROJECTS_URL} className="flex gap-1">
-              <span>프로젝트 목록</span>
+            <Link target="_blank" to={PORTFOLIO_URL} className="flex gap-1">
+              <span>포트폴리오</span>
               <ExternalLink className="w-[1rem] h-[1rem]" />
             </Link>
           </Button>
@@ -68,7 +67,7 @@ const IndexPage = ({}: PageProps) => {
           <H2 className="flex justify-between">
             <span>Recent Posts 💁‍♂️</span>
             <div className="flex items-end text-sm font-light">
-              <Link to="/">더보기</Link>
+              <Link to="/posts">더보기</Link>
             </div>
           </H2>
           <div className="mt-8 flex flex-col gap-y-4">
@@ -77,7 +76,7 @@ const IndexPage = ({}: PageProps) => {
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   );
 };
 
