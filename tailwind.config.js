@@ -22,6 +22,7 @@ module.exports = {
       },
       zIndex: {
         layout: 10,
+        particle: 100,
       },
       colors: {
         border: "hsl(var(--border))",
