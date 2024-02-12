@@ -2,6 +2,7 @@ import React from "react";
 import { Music4 } from "lucide-react";
 import ThemeToggle from "@/components/theme-toggle";
 import { Link } from "gatsby";
+import MobileMenu from "@/components/mobile-menu";
 
 export default function Header() {
   return (
@@ -12,7 +13,7 @@ export default function Header() {
             <span className="font-bold text-lg">Minseok Log</span>
             <Music4 className="w-[1.2rem] h-[1.2rem]" />
           </Link>
-          <ul className="flex items-center gap-6">
+          <ul className="hidden sm:flex items-center gap-6">
             <li>
               <Link
                 to="/posts"
@@ -40,6 +41,7 @@ export default function Header() {
           </ul>
         </div>
         <div className="flex gap-2">
+          <MobileMenu />
           <ThemeToggle />
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { Badge } from "@/components/ui/badge";
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 
@@ -19,9 +20,16 @@ export default function PostItem() {
             작성해보았습니다. 계기는 이며 서울특별시 강동구
           </span>
         </div>
-        <span className="text-xs mt-4 text-slate-500 dark:text-slate-400">
-          2024. 02. 12.
-        </span>
+        <div className="mt-4 flex flex-col">
+          <div className="flex flex-wrap gap-1">
+            <Badge variant="secondary">리뉴얼</Badge>
+            <Badge variant="secondary">Gatsby</Badge>
+            <Badge variant="secondary">Next</Badge>
+          </div>
+          <span className="mt-3 text-xs text-slate-500 dark:text-slate-400">
+            2024. 02. 12.
+          </span>
+        </div>
       </div>
     </div>
   );
