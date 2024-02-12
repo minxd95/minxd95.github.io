@@ -41,7 +41,9 @@ export default function Header() {
           </ul>
         </div>
         <div className="flex gap-2">
-          <MobileMenu />
+          <div className="flex sm:hidden">
+            <MobileMenu />
+          </div>
           <ThemeToggle />
         </div>
       </div>
