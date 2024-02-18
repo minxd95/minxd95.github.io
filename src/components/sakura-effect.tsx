@@ -52,7 +52,7 @@ const SakuraEffect: React.FC = () => {
       (Math.round(documentHeight * 0.007) + Math.random() * 5) * fallSpeed;
 
     const size = getRandomInt(minSize, maxSize);
-    const startPosLeft = Math.random() * documentWidth - 100;
+    const startPosLeft = Math.random() * documentWidth;
     const startPosTop = -(Math.random() * 20 + 15);
 
     const newPetal: Petal = {
